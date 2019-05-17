@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    
+Documentation    Basic functionality testing for calculator application via the Apple Accessibility API.
 
 Library             Process
 Library             OperatingSystem

@@ -136,7 +136,7 @@ class lib_calc:
 
     def check_result(self, expected_number):
         """
-        Checks the current display result with the expected number.
+        Check the current display result with the expected number.
 
         :return: None
         """
@@ -171,7 +171,7 @@ class lib_calc:
 
     def check_binary_calc(self, a, operator, b, expected_result):
         """
-        Checks binary calculation by comparing the expected result with the display result.
+        Check binary calculation by comparing the expected result with the display result.
 
         :param a: str, number 0-9
         :param operator: str,  basic operators containing +, -, *, /

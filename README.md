@@ -1,0 +1,41 @@
+# Calculator Robot Test
+
+This project contains tests for Calculator application in OS X system with Robot Framework.
+
+## Prerequisites
+
+- Python3
+- robotframework
+- atomacos
+
+```bash
+pip install -r requirements.txt
+```
+
+## Test cases
+
+- Check if all the numbers are working (0 to 9)
+
+- Check if the clear key is working
+
+- Check if the sum or equal key is working
+
+- Check the addition of two integer numbers
+
+- Check the subtraction of two negative numbers
+
+- Check the multiplication of two integer numbers
+
+- Check the division of two integer numbers
+
+- Check the division of a number by zero
+
+- Check the division of zero by any number
+
+## Running test
+
+```bash
+robot -L debug calc.robot
+```
+
+Example results are in ./results folder.

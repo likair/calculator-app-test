@@ -1,0 +1,1188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.1 (Python 3.7.3 on darwin)" generated="20190517 00:12:09.882" rpa="false">
+<suite id="s1" name="Calc" source="/Users/likai/workspace/calculator/calc.robot">
+<kw name="Suite Setup" type="setup">
+<kw name="Start Calc" library="lib_calc">
+<doc>Start the calculator app by bundle id.</doc>
+<msg timestamp="20190517 00:12:10.256" level="DEBUG">Starting calculator.app.</msg>
+<msg timestamp="20190517 00:12:11.379" level="INFO">Succeeded to start calculator.app.</msg>
+<msg timestamp="20190517 00:12:11.380" level="DEBUG">Getting the UI element references.</msg>
+<msg timestamp="20190517 00:12:11.419" level="DEBUG">Getting button reference for button clear.</msg>
+<msg timestamp="20190517 00:12:11.464" level="INFO">Succeeded to get button reference for button clear.</msg>
+<msg timestamp="20190517 00:12:11.464" level="DEBUG">Getting button reference for button add.</msg>
+<msg timestamp="20190517 00:12:11.489" level="INFO">Succeeded to get button reference for button add.</msg>
+<msg timestamp="20190517 00:12:11.489" level="DEBUG">Getting button reference for button subtract.</msg>
+<msg timestamp="20190517 00:12:11.503" level="INFO">Succeeded to get button reference for button subtract.</msg>
+<msg timestamp="20190517 00:12:11.503" level="DEBUG">Getting button reference for button multiply.</msg>
+<msg timestamp="20190517 00:12:11.520" level="INFO">Succeeded to get button reference for button multiply.</msg>
+<msg timestamp="20190517 00:12:11.520" level="DEBUG">Getting button reference for button divide.</msg>
+<msg timestamp="20190517 00:12:11.552" level="INFO">Succeeded to get button reference for button divide.</msg>
+<msg timestamp="20190517 00:12:11.553" level="DEBUG">Getting button reference for button equals.</msg>
+<msg timestamp="20190517 00:12:11.558" level="INFO">Succeeded to get button reference for button equals.</msg>
+<msg timestamp="20190517 00:12:11.558" level="DEBUG">Getting button reference for button negate.</msg>
+<msg timestamp="20190517 00:12:11.585" level="INFO">Succeeded to get button reference for button negate.</msg>
+<msg timestamp="20190517 00:12:11.585" level="INFO">Succeeded to get the UI element references.</msg>
+<status status="PASS" starttime="20190517 00:12:10.256" endtime="20190517 00:12:11.585"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:10.256" endtime="20190517 00:12:11.585"></status>
+</kw>
+<test id="s1-t1" name="Check if all the numbers are working (0 to 9)">
+<kw name="Test Setup" type="setup">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:11.586" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:11.587" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:11.702" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:11.703" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:11.586" endtime="20190517 00:12:11.703"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:11.586" endtime="20190517 00:12:11.704"></status>
+</kw>
+<kw name="${i} IN RANGE [ 10 ]" type="for">
+<kw name="${i} = 0" type="foritem">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:11.708" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:11.713" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:11.830" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:11.830" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:11.707" endtime="20190517 00:12:11.830"></status>
+</kw>
+<kw name="Check Number" library="lib_calc">
+<doc>Check number button press functionality by comparing with the display result.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20190517 00:12:11.831" level="DEBUG">Checking number button 0 press.</msg>
+<msg timestamp="20190517 00:12:11.831" level="DEBUG">Getting button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:11.842" level="INFO">Succeeded to get button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:11.843" level="DEBUG">Performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:11.952" level="INFO">Succeeded to performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:11.953" level="DEBUG">Checking the result with expected number 0.</msg>
+<msg timestamp="20190517 00:12:11.970" level="INFO">Succeeded to get result: 0.</msg>
+<msg timestamp="20190517 00:12:11.970" level="DEBUG">Succeeded to check the result with expected number 0.</msg>
+<msg timestamp="20190517 00:12:11.971" level="DEBUG">Succeeded to check number button 0 press.</msg>
+<status status="PASS" starttime="20190517 00:12:11.830" endtime="20190517 00:12:11.971"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:11.706" endtime="20190517 00:12:11.971"></status>
+</kw>
+<kw name="${i} = 1" type="foritem">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:11.972" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:11.976" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:12.089" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:12.089" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:11.972" endtime="20190517 00:12:12.090"></status>
+</kw>
+<kw name="Check Number" library="lib_calc">
+<doc>Check number button press functionality by comparing with the display result.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20190517 00:12:12.091" level="DEBUG">Checking number button 1 press.</msg>
+<msg timestamp="20190517 00:12:12.092" level="DEBUG">Getting button reference for button one.</msg>
+<msg timestamp="20190517 00:12:12.104" level="INFO">Succeeded to get button reference for button one.</msg>
+<msg timestamp="20190517 00:12:12.105" level="DEBUG">Performing the one button press.</msg>
+<msg timestamp="20190517 00:12:12.214" level="INFO">Succeeded to performing the one button press.</msg>
+<msg timestamp="20190517 00:12:12.215" level="DEBUG">Checking the result with expected number 1.</msg>
+<msg timestamp="20190517 00:12:12.224" level="INFO">Succeeded to get result: 1.</msg>
+<msg timestamp="20190517 00:12:12.224" level="DEBUG">Succeeded to check the result with expected number 1.</msg>
+<msg timestamp="20190517 00:12:12.224" level="DEBUG">Succeeded to check number button 1 press.</msg>
+<status status="PASS" starttime="20190517 00:12:12.090" endtime="20190517 00:12:12.225"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:11.971" endtime="20190517 00:12:12.225"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:12.226" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:12.231" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:12.345" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:12.346" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:12.226" endtime="20190517 00:12:12.346"></status>
+</kw>
+<kw name="Check Number" library="lib_calc">
+<doc>Check number button press functionality by comparing with the display result.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20190517 00:12:12.348" level="DEBUG">Checking number button 2 press.</msg>
+<msg timestamp="20190517 00:12:12.348" level="DEBUG">Getting button reference for button two.</msg>
+<msg timestamp="20190517 00:12:12.366" level="INFO">Succeeded to get button reference for button two.</msg>
+<msg timestamp="20190517 00:12:12.369" level="DEBUG">Performing the two button press.</msg>
+<msg timestamp="20190517 00:12:12.481" level="INFO">Succeeded to performing the two button press.</msg>
+<msg timestamp="20190517 00:12:12.482" level="DEBUG">Checking the result with expected number 2.</msg>
+<msg timestamp="20190517 00:12:12.485" level="INFO">Succeeded to get result: 2.</msg>
+<msg timestamp="20190517 00:12:12.485" level="DEBUG">Succeeded to check the result with expected number 2.</msg>
+<msg timestamp="20190517 00:12:12.485" level="DEBUG">Succeeded to check number button 2 press.</msg>
+<status status="PASS" starttime="20190517 00:12:12.347" endtime="20190517 00:12:12.485"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:12.225" endtime="20190517 00:12:12.485"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:12.486" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:12.487" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:12.596" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:12.597" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:12.485" endtime="20190517 00:12:12.598"></status>
+</kw>
+<kw name="Check Number" library="lib_calc">
+<doc>Check number button press functionality by comparing with the display result.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20190517 00:12:12.599" level="DEBUG">Checking number button 3 press.</msg>
+<msg timestamp="20190517 00:12:12.599" level="DEBUG">Getting button reference for button three.</msg>
+<msg timestamp="20190517 00:12:12.606" level="INFO">Succeeded to get button reference for button three.</msg>
+<msg timestamp="20190517 00:12:12.607" level="DEBUG">Performing the three button press.</msg>
+<msg timestamp="20190517 00:12:12.714" level="INFO">Succeeded to performing the three button press.</msg>
+<msg timestamp="20190517 00:12:12.714" level="DEBUG">Checking the result with expected number 3.</msg>
+<msg timestamp="20190517 00:12:12.717" level="INFO">Succeeded to get result: 3.</msg>
+<msg timestamp="20190517 00:12:12.717" level="DEBUG">Succeeded to check the result with expected number 3.</msg>
+<msg timestamp="20190517 00:12:12.717" level="DEBUG">Succeeded to check number button 3 press.</msg>
+<status status="PASS" starttime="20190517 00:12:12.598" endtime="20190517 00:12:12.717"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:12.485" endtime="20190517 00:12:12.717"></status>
+</kw>
+<kw name="${i} = 4" type="foritem">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:12.718" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:12.719" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:12.830" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:12.831" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:12.718" endtime="20190517 00:12:12.831"></status>
+</kw>
+<kw name="Check Number" library="lib_calc">
+<doc>Check number button press functionality by comparing with the display result.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20190517 00:12:12.831" level="DEBUG">Checking number button 4 press.</msg>
+<msg timestamp="20190517 00:12:12.831" level="DEBUG">Getting button reference for button four.</msg>
+<msg timestamp="20190517 00:12:12.857" level="INFO">Succeeded to get button reference for button four.</msg>
+<msg timestamp="20190517 00:12:12.858" level="DEBUG">Performing the four button press.</msg>
+<msg timestamp="20190517 00:12:12.968" level="INFO">Succeeded to performing the four button press.</msg>
+<msg timestamp="20190517 00:12:12.969" level="DEBUG">Checking the result with expected number 4.</msg>
+<msg timestamp="20190517 00:12:12.977" level="INFO">Succeeded to get result: 4.</msg>
+<msg timestamp="20190517 00:12:12.977" level="DEBUG">Succeeded to check the result with expected number 4.</msg>
+<msg timestamp="20190517 00:12:12.977" level="DEBUG">Succeeded to check number button 4 press.</msg>
+<status status="PASS" starttime="20190517 00:12:12.831" endtime="20190517 00:12:12.978"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:12.717" endtime="20190517 00:12:12.978"></status>
+</kw>
+<kw name="${i} = 5" type="foritem">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:12.979" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:12.984" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:13.101" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:13.101" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:12.979" endtime="20190517 00:12:13.101"></status>
+</kw>
+<kw name="Check Number" library="lib_calc">
+<doc>Check number button press functionality by comparing with the display result.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20190517 00:12:13.103" level="DEBUG">Checking number button 5 press.</msg>
+<msg timestamp="20190517 00:12:13.103" level="DEBUG">Getting button reference for button five.</msg>
+<msg timestamp="20190517 00:12:13.118" level="INFO">Succeeded to get button reference for button five.</msg>
+<msg timestamp="20190517 00:12:13.119" level="DEBUG">Performing the five button press.</msg>
+<msg timestamp="20190517 00:12:13.229" level="INFO">Succeeded to performing the five button press.</msg>
+<msg timestamp="20190517 00:12:13.229" level="DEBUG">Checking the result with expected number 5.</msg>
+<msg timestamp="20190517 00:12:13.237" level="INFO">Succeeded to get result: 5.</msg>
+<msg timestamp="20190517 00:12:13.237" level="DEBUG">Succeeded to check the result with expected number 5.</msg>
+<msg timestamp="20190517 00:12:13.237" level="DEBUG">Succeeded to check number button 5 press.</msg>
+<status status="PASS" starttime="20190517 00:12:13.102" endtime="20190517 00:12:13.238"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:12.978" endtime="20190517 00:12:13.238"></status>
+</kw>
+<kw name="${i} = 6" type="foritem">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:13.240" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:13.244" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:13.360" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:13.360" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:13.239" endtime="20190517 00:12:13.361"></status>
+</kw>
+<kw name="Check Number" library="lib_calc">
+<doc>Check number button press functionality by comparing with the display result.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20190517 00:12:13.363" level="DEBUG">Checking number button 6 press.</msg>
+<msg timestamp="20190517 00:12:13.363" level="DEBUG">Getting button reference for button six.</msg>
+<msg timestamp="20190517 00:12:13.389" level="INFO">Succeeded to get button reference for button six.</msg>
+<msg timestamp="20190517 00:12:13.390" level="DEBUG">Performing the six button press.</msg>
+<msg timestamp="20190517 00:12:13.498" level="INFO">Succeeded to performing the six button press.</msg>
+<msg timestamp="20190517 00:12:13.499" level="DEBUG">Checking the result with expected number 6.</msg>
+<msg timestamp="20190517 00:12:13.502" level="INFO">Succeeded to get result: 6.</msg>
+<msg timestamp="20190517 00:12:13.502" level="DEBUG">Succeeded to check the result with expected number 6.</msg>
+<msg timestamp="20190517 00:12:13.503" level="DEBUG">Succeeded to check number button 6 press.</msg>
+<status status="PASS" starttime="20190517 00:12:13.361" endtime="20190517 00:12:13.503"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:13.238" endtime="20190517 00:12:13.503"></status>
+</kw>
+<kw name="${i} = 7" type="foritem">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:13.504" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:13.507" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:13.618" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:13.619" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:13.504" endtime="20190517 00:12:13.619"></status>
+</kw>
+<kw name="Check Number" library="lib_calc">
+<doc>Check number button press functionality by comparing with the display result.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20190517 00:12:13.622" level="DEBUG">Checking number button 7 press.</msg>
+<msg timestamp="20190517 00:12:13.623" level="DEBUG">Getting button reference for button seven.</msg>
+<msg timestamp="20190517 00:12:13.678" level="INFO">Succeeded to get button reference for button seven.</msg>
+<msg timestamp="20190517 00:12:13.679" level="DEBUG">Performing the seven button press.</msg>
+<msg timestamp="20190517 00:12:13.789" level="INFO">Succeeded to performing the seven button press.</msg>
+<msg timestamp="20190517 00:12:13.789" level="DEBUG">Checking the result with expected number 7.</msg>
+<msg timestamp="20190517 00:12:13.797" level="INFO">Succeeded to get result: 7.</msg>
+<msg timestamp="20190517 00:12:13.797" level="DEBUG">Succeeded to check the result with expected number 7.</msg>
+<msg timestamp="20190517 00:12:13.798" level="DEBUG">Succeeded to check number button 7 press.</msg>
+<status status="PASS" starttime="20190517 00:12:13.620" endtime="20190517 00:12:13.798"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:13.503" endtime="20190517 00:12:13.798"></status>
+</kw>
+<kw name="${i} = 8" type="foritem">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:13.799" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:13.800" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:13.907" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:13.907" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:13.799" endtime="20190517 00:12:13.907"></status>
+</kw>
+<kw name="Check Number" library="lib_calc">
+<doc>Check number button press functionality by comparing with the display result.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20190517 00:12:13.908" level="DEBUG">Checking number button 8 press.</msg>
+<msg timestamp="20190517 00:12:13.908" level="DEBUG">Getting button reference for button eight.</msg>
+<msg timestamp="20190517 00:12:13.936" level="INFO">Succeeded to get button reference for button eight.</msg>
+<msg timestamp="20190517 00:12:13.937" level="DEBUG">Performing the eight button press.</msg>
+<msg timestamp="20190517 00:12:14.045" level="INFO">Succeeded to performing the eight button press.</msg>
+<msg timestamp="20190517 00:12:14.046" level="DEBUG">Checking the result with expected number 8.</msg>
+<msg timestamp="20190517 00:12:14.054" level="INFO">Succeeded to get result: 8.</msg>
+<msg timestamp="20190517 00:12:14.054" level="DEBUG">Succeeded to check the result with expected number 8.</msg>
+<msg timestamp="20190517 00:12:14.054" level="DEBUG">Succeeded to check number button 8 press.</msg>
+<status status="PASS" starttime="20190517 00:12:13.907" endtime="20190517 00:12:14.055"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:13.799" endtime="20190517 00:12:14.055"></status>
+</kw>
+<kw name="${i} = 9" type="foritem">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:14.056" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:14.061" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:14.169" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:14.169" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:14.056" endtime="20190517 00:12:14.170"></status>
+</kw>
+<kw name="Check Number" library="lib_calc">
+<doc>Check number button press functionality by comparing with the display result.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20190517 00:12:14.171" level="DEBUG">Checking number button 9 press.</msg>
+<msg timestamp="20190517 00:12:14.171" level="DEBUG">Getting button reference for button nine.</msg>
+<msg timestamp="20190517 00:12:14.183" level="INFO">Succeeded to get button reference for button nine.</msg>
+<msg timestamp="20190517 00:12:14.184" level="DEBUG">Performing the nine button press.</msg>
+<msg timestamp="20190517 00:12:14.291" level="INFO">Succeeded to performing the nine button press.</msg>
+<msg timestamp="20190517 00:12:14.292" level="DEBUG">Checking the result with expected number 9.</msg>
+<msg timestamp="20190517 00:12:14.295" level="INFO">Succeeded to get result: 9.</msg>
+<msg timestamp="20190517 00:12:14.296" level="DEBUG">Succeeded to check the result with expected number 9.</msg>
+<msg timestamp="20190517 00:12:14.296" level="DEBUG">Succeeded to check number button 9 press.</msg>
+<status status="PASS" starttime="20190517 00:12:14.170" endtime="20190517 00:12:14.296"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:14.055" endtime="20190517 00:12:14.296"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:11.705" endtime="20190517 00:12:14.296"></status>
+</kw>
+<kw name="Test Teardown" type="teardown">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:14.296" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:14.297" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:14.406" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:14.407" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:14.296" endtime="20190517 00:12:14.407"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:14.296" endtime="20190517 00:12:14.408"></status>
+</kw>
+<tags>
+<tag>basic</tag>
+<tag>number</tag>
+</tags>
+<status status="PASS" starttime="20190517 00:12:11.585" endtime="20190517 00:12:14.408" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Check if the clear key is working">
+<kw name="Test Setup" type="setup">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:14.416" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:14.421" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:14.537" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:14.537" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:14.415" endtime="20190517 00:12:14.538"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:14.414" endtime="20190517 00:12:14.538"></status>
+</kw>
+<kw name="Get Button" library="lib_calc">
+<doc>Get the button reference by button label name.</doc>
+<arguments>
+<arg>${LABEL_CLEAR}</arg>
+</arguments>
+<assign>
+<var>${button}</var>
+</assign>
+<msg timestamp="20190517 00:12:14.543" level="DEBUG">Getting button reference for button clear.</msg>
+<msg timestamp="20190517 00:12:14.595" level="INFO">Succeeded to get button reference for button clear.</msg>
+<msg timestamp="20190517 00:12:14.598" level="INFO">${button} = &lt;atomacos.AXClasses.NativeUIElement AXButton all clear&gt;</msg>
+<status status="PASS" starttime="20190517 00:12:14.540" endtime="20190517 00:12:14.598"></status>
+</kw>
+<kw name="Press Button" library="lib_calc">
+<doc>Perform button press.</doc>
+<arguments>
+<arg>${button}</arg>
+</arguments>
+<msg timestamp="20190517 00:12:14.599" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:14.706" level="INFO">Succeeded to performing the clear button press.</msg>
+<status status="PASS" starttime="20190517 00:12:14.598" endtime="20190517 00:12:14.706"></status>
+</kw>
+<kw name="Test Teardown" type="teardown">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:14.707" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:14.708" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:14.816" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:14.816" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:14.707" endtime="20190517 00:12:14.817"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:14.706" endtime="20190517 00:12:14.817"></status>
+</kw>
+<tags>
+<tag>basic</tag>
+<tag>clear</tag>
+</tags>
+<status status="PASS" starttime="20190517 00:12:14.411" endtime="20190517 00:12:14.817" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Check if the sum or equal key is working">
+<kw name="Test Setup" type="setup">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:14.819" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:14.820" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:14.929" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:14.929" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:14.818" endtime="20190517 00:12:14.930"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:14.818" endtime="20190517 00:12:14.931"></status>
+</kw>
+<kw name="Get Button" library="lib_calc">
+<doc>Get the button reference by button label name.</doc>
+<arguments>
+<arg>${LABEL_ADD}</arg>
+</arguments>
+<assign>
+<var>${button}</var>
+</assign>
+<msg timestamp="20190517 00:12:14.934" level="DEBUG">Getting button reference for button add.</msg>
+<msg timestamp="20190517 00:12:14.978" level="INFO">Succeeded to get button reference for button add.</msg>
+<msg timestamp="20190517 00:12:14.983" level="INFO">${button} = &lt;atomacos.AXClasses.NativeUIElement AXButton button&gt;</msg>
+<status status="PASS" starttime="20190517 00:12:14.932" endtime="20190517 00:12:14.983"></status>
+</kw>
+<kw name="Press Button" library="lib_calc">
+<doc>Perform button press.</doc>
+<arguments>
+<arg>${button}</arg>
+</arguments>
+<msg timestamp="20190517 00:12:14.984" level="DEBUG">Performing the add button press.</msg>
+<msg timestamp="20190517 00:12:15.092" level="INFO">Succeeded to performing the add button press.</msg>
+<status status="PASS" starttime="20190517 00:12:14.983" endtime="20190517 00:12:15.093"></status>
+</kw>
+<kw name="Get Button" library="lib_calc">
+<doc>Get the button reference by button label name.</doc>
+<arguments>
+<arg>${LABEL_EQUALS}</arg>
+</arguments>
+<assign>
+<var>${button}</var>
+</assign>
+<msg timestamp="20190517 00:12:15.095" level="DEBUG">Getting button reference for button equals.</msg>
+<msg timestamp="20190517 00:12:15.117" level="INFO">Succeeded to get button reference for button equals.</msg>
+<msg timestamp="20190517 00:12:15.125" level="INFO">${button} = &lt;atomacos.AXClasses.NativeUIElement AXButton button&gt;</msg>
+<status status="PASS" starttime="20190517 00:12:15.094" endtime="20190517 00:12:15.125"></status>
+</kw>
+<kw name="Press Button" library="lib_calc">
+<doc>Perform button press.</doc>
+<arguments>
+<arg>${button}</arg>
+</arguments>
+<msg timestamp="20190517 00:12:15.127" level="DEBUG">Performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:15.236" level="INFO">Succeeded to performing the equals button press.</msg>
+<status status="PASS" starttime="20190517 00:12:15.125" endtime="20190517 00:12:15.236"></status>
+</kw>
+<kw name="Test Teardown" type="teardown">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:15.239" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:15.246" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:15.354" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:15.354" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:15.238" endtime="20190517 00:12:15.354"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:15.237" endtime="20190517 00:12:15.354"></status>
+</kw>
+<tags>
+<tag>basic</tag>
+<tag>equal</tag>
+</tags>
+<status status="PASS" starttime="20190517 00:12:14.818" endtime="20190517 00:12:15.354" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Check the addition of two integer numbers">
+<kw name="Test Setup" type="setup">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:15.355" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:15.357" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:15.461" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:15.461" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:15.355" endtime="20190517 00:12:15.461"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:15.355" endtime="20190517 00:12:15.461"></status>
+</kw>
+<kw name="Check Binary Calc" library="lib_calc">
+<doc>Checks binary calculation by comparing the expected result with the display result.</doc>
+<arguments>
+<arg>1</arg>
+<arg>+</arg>
+<arg>1</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190517 00:12:15.461" level="DEBUG">Checking calculation: 1 + 1 = 2.</msg>
+<msg timestamp="20190517 00:12:15.462" level="DEBUG">Getting button reference for button one.</msg>
+<msg timestamp="20190517 00:12:15.474" level="INFO">Succeeded to get button reference for button one.</msg>
+<msg timestamp="20190517 00:12:15.475" level="DEBUG">Performing the one button press.</msg>
+<msg timestamp="20190517 00:12:15.582" level="INFO">Succeeded to performing the one button press.</msg>
+<msg timestamp="20190517 00:12:15.588" level="DEBUG">Performing the add button press.</msg>
+<msg timestamp="20190517 00:12:15.696" level="INFO">Succeeded to performing the add button press.</msg>
+<msg timestamp="20190517 00:12:15.696" level="DEBUG">Getting button reference for button one.</msg>
+<msg timestamp="20190517 00:12:15.713" level="INFO">Succeeded to get button reference for button one.</msg>
+<msg timestamp="20190517 00:12:15.714" level="DEBUG">Performing the one button press.</msg>
+<msg timestamp="20190517 00:12:15.822" level="INFO">Succeeded to performing the one button press.</msg>
+<msg timestamp="20190517 00:12:15.832" level="DEBUG">Performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:15.941" level="INFO">Succeeded to performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:15.941" level="DEBUG">Checking the result with expected number 2.</msg>
+<msg timestamp="20190517 00:12:15.943" level="INFO">Succeeded to get result: 2.</msg>
+<msg timestamp="20190517 00:12:15.943" level="DEBUG">Succeeded to check the result with expected number 2.</msg>
+<msg timestamp="20190517 00:12:15.943" level="DEBUG">Succeed to check calculation: 1 + 1 = 2.</msg>
+<status status="PASS" starttime="20190517 00:12:15.461" endtime="20190517 00:12:15.943"></status>
+</kw>
+<kw name="Check Binary Calc" library="lib_calc">
+<doc>Checks binary calculation by comparing the expected result with the display result.</doc>
+<arguments>
+<arg>10</arg>
+<arg>+</arg>
+<arg>-5</arg>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20190517 00:12:15.944" level="DEBUG">Checking calculation: 10 + -5 = 5.</msg>
+<msg timestamp="20190517 00:12:15.944" level="DEBUG">Getting button reference for button one.</msg>
+<msg timestamp="20190517 00:12:15.956" level="INFO">Succeeded to get button reference for button one.</msg>
+<msg timestamp="20190517 00:12:15.957" level="DEBUG">Performing the one button press.</msg>
+<msg timestamp="20190517 00:12:16.065" level="INFO">Succeeded to performing the one button press.</msg>
+<msg timestamp="20190517 00:12:16.065" level="DEBUG">Getting button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:16.094" level="INFO">Succeeded to get button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:16.095" level="DEBUG">Performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:16.202" level="INFO">Succeeded to performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:16.209" level="DEBUG">Performing the add button press.</msg>
+<msg timestamp="20190517 00:12:16.328" level="INFO">Succeeded to performing the add button press.</msg>
+<msg timestamp="20190517 00:12:16.328" level="DEBUG">Getting button reference for button five.</msg>
+<msg timestamp="20190517 00:12:16.344" level="INFO">Succeeded to get button reference for button five.</msg>
+<msg timestamp="20190517 00:12:16.345" level="DEBUG">Performing the five button press.</msg>
+<msg timestamp="20190517 00:12:16.450" level="INFO">Succeeded to performing the five button press.</msg>
+<msg timestamp="20190517 00:12:16.452" level="DEBUG">Performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:16.561" level="INFO">Succeeded to performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:16.567" level="DEBUG">Performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:16.674" level="INFO">Succeeded to performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:16.674" level="DEBUG">Checking the result with expected number 5.</msg>
+<msg timestamp="20190517 00:12:16.677" level="INFO">Succeeded to get result: 5.</msg>
+<msg timestamp="20190517 00:12:16.677" level="DEBUG">Succeeded to check the result with expected number 5.</msg>
+<msg timestamp="20190517 00:12:16.677" level="DEBUG">Succeed to check calculation: 10 + -5 = 5.</msg>
+<status status="PASS" starttime="20190517 00:12:15.944" endtime="20190517 00:12:16.677"></status>
+</kw>
+<kw name="Check Binary Calc" library="lib_calc">
+<doc>Checks binary calculation by comparing the expected result with the display result.</doc>
+<arguments>
+<arg>-1</arg>
+<arg>+</arg>
+<arg>1</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20190517 00:12:16.678" level="DEBUG">Checking calculation: -1 + 1 = 0.</msg>
+<msg timestamp="20190517 00:12:16.678" level="DEBUG">Getting button reference for button one.</msg>
+<msg timestamp="20190517 00:12:16.689" level="INFO">Succeeded to get button reference for button one.</msg>
+<msg timestamp="20190517 00:12:16.690" level="DEBUG">Performing the one button press.</msg>
+<msg timestamp="20190517 00:12:16.798" level="INFO">Succeeded to performing the one button press.</msg>
+<msg timestamp="20190517 00:12:16.807" level="DEBUG">Performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:16.919" level="INFO">Succeeded to performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:16.925" level="DEBUG">Performing the add button press.</msg>
+<msg timestamp="20190517 00:12:17.035" level="INFO">Succeeded to performing the add button press.</msg>
+<msg timestamp="20190517 00:12:17.035" level="DEBUG">Getting button reference for button one.</msg>
+<msg timestamp="20190517 00:12:17.064" level="INFO">Succeeded to get button reference for button one.</msg>
+<msg timestamp="20190517 00:12:17.066" level="DEBUG">Performing the one button press.</msg>
+<msg timestamp="20190517 00:12:17.176" level="INFO">Succeeded to performing the one button press.</msg>
+<msg timestamp="20190517 00:12:17.179" level="DEBUG">Performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:17.288" level="INFO">Succeeded to performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:17.289" level="DEBUG">Checking the result with expected number 0.</msg>
+<msg timestamp="20190517 00:12:17.299" level="INFO">Succeeded to get result: 0.</msg>
+<msg timestamp="20190517 00:12:17.300" level="DEBUG">Succeeded to check the result with expected number 0.</msg>
+<msg timestamp="20190517 00:12:17.300" level="DEBUG">Succeed to check calculation: -1 + 1 = 0.</msg>
+<status status="PASS" starttime="20190517 00:12:16.677" endtime="20190517 00:12:17.300"></status>
+</kw>
+<kw name="Test Teardown" type="teardown">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:17.303" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:17.307" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:17.422" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:17.422" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:17.303" endtime="20190517 00:12:17.422"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:17.301" endtime="20190517 00:12:17.423"></status>
+</kw>
+<tags>
+<tag>function</tag>
+</tags>
+<status status="PASS" starttime="20190517 00:12:15.354" endtime="20190517 00:12:17.424" critical="yes"></status>
+</test>
+<test id="s1-t5" name="Check the subtraction of two negative numbers">
+<kw name="Test Setup" type="setup">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:17.431" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:17.435" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:17.553" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:17.553" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:17.430" endtime="20190517 00:12:17.554"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:17.429" endtime="20190517 00:12:17.555"></status>
+</kw>
+<kw name="Check Binary Calc" library="lib_calc">
+<doc>Checks binary calculation by comparing the expected result with the display result.</doc>
+<arguments>
+<arg>-2</arg>
+<arg>-</arg>
+<arg>-4</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190517 00:12:17.558" level="DEBUG">Checking calculation: -2 - -4 = 2.</msg>
+<msg timestamp="20190517 00:12:17.559" level="DEBUG">Getting button reference for button two.</msg>
+<msg timestamp="20190517 00:12:17.571" level="INFO">Succeeded to get button reference for button two.</msg>
+<msg timestamp="20190517 00:12:17.573" level="DEBUG">Performing the two button press.</msg>
+<msg timestamp="20190517 00:12:17.684" level="INFO">Succeeded to performing the two button press.</msg>
+<msg timestamp="20190517 00:12:17.688" level="DEBUG">Performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:17.796" level="INFO">Succeeded to performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:17.800" level="DEBUG">Performing the subtract button press.</msg>
+<msg timestamp="20190517 00:12:17.909" level="INFO">Succeeded to performing the subtract button press.</msg>
+<msg timestamp="20190517 00:12:17.909" level="DEBUG">Getting button reference for button four.</msg>
+<msg timestamp="20190517 00:12:17.956" level="INFO">Succeeded to get button reference for button four.</msg>
+<msg timestamp="20190517 00:12:17.957" level="DEBUG">Performing the four button press.</msg>
+<msg timestamp="20190517 00:12:18.065" level="INFO">Succeeded to performing the four button press.</msg>
+<msg timestamp="20190517 00:12:18.070" level="DEBUG">Performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:18.181" level="INFO">Succeeded to performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:18.185" level="DEBUG">Performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:18.293" level="INFO">Succeeded to performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:18.294" level="DEBUG">Checking the result with expected number 2.</msg>
+<msg timestamp="20190517 00:12:18.303" level="INFO">Succeeded to get result: 2.</msg>
+<msg timestamp="20190517 00:12:18.303" level="DEBUG">Succeeded to check the result with expected number 2.</msg>
+<msg timestamp="20190517 00:12:18.303" level="DEBUG">Succeed to check calculation: -2 - -4 = 2.</msg>
+<status status="PASS" starttime="20190517 00:12:17.556" endtime="20190517 00:12:18.304"></status>
+</kw>
+<kw name="Check Binary Calc" library="lib_calc">
+<doc>Checks binary calculation by comparing the expected result with the display result.</doc>
+<arguments>
+<arg>-1</arg>
+<arg>-</arg>
+<arg>-8</arg>
+<arg>7</arg>
+</arguments>
+<msg timestamp="20190517 00:12:18.305" level="DEBUG">Checking calculation: -1 - -8 = 7.</msg>
+<msg timestamp="20190517 00:12:18.305" level="DEBUG">Getting button reference for button one.</msg>
+<msg timestamp="20190517 00:12:18.321" level="INFO">Succeeded to get button reference for button one.</msg>
+<msg timestamp="20190517 00:12:18.323" level="DEBUG">Performing the one button press.</msg>
+<msg timestamp="20190517 00:12:18.432" level="INFO">Succeeded to performing the one button press.</msg>
+<msg timestamp="20190517 00:12:18.438" level="DEBUG">Performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:18.549" level="INFO">Succeeded to performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:18.560" level="DEBUG">Performing the subtract button press.</msg>
+<msg timestamp="20190517 00:12:18.679" level="INFO">Succeeded to performing the subtract button press.</msg>
+<msg timestamp="20190517 00:12:18.680" level="DEBUG">Getting button reference for button eight.</msg>
+<msg timestamp="20190517 00:12:18.726" level="INFO">Succeeded to get button reference for button eight.</msg>
+<msg timestamp="20190517 00:12:18.727" level="DEBUG">Performing the eight button press.</msg>
+<msg timestamp="20190517 00:12:18.834" level="INFO">Succeeded to performing the eight button press.</msg>
+<msg timestamp="20190517 00:12:18.839" level="DEBUG">Performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:18.947" level="INFO">Succeeded to performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:18.957" level="DEBUG">Performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:19.069" level="INFO">Succeeded to performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:19.070" level="DEBUG">Checking the result with expected number 7.</msg>
+<msg timestamp="20190517 00:12:19.077" level="INFO">Succeeded to get result: 7.</msg>
+<msg timestamp="20190517 00:12:19.077" level="DEBUG">Succeeded to check the result with expected number 7.</msg>
+<msg timestamp="20190517 00:12:19.077" level="DEBUG">Succeed to check calculation: -1 - -8 = 7.</msg>
+<status status="PASS" starttime="20190517 00:12:18.305" endtime="20190517 00:12:19.077"></status>
+</kw>
+<kw name="Check Binary Calc" library="lib_calc">
+<doc>Checks binary calculation by comparing the expected result with the display result.</doc>
+<arguments>
+<arg>-30</arg>
+<arg>-</arg>
+<arg>-2</arg>
+<arg>-28</arg>
+</arguments>
+<msg timestamp="20190517 00:12:19.078" level="DEBUG">Checking calculation: -30 - -2 = -28.</msg>
+<msg timestamp="20190517 00:12:19.078" level="DEBUG">Getting button reference for button three.</msg>
+<msg timestamp="20190517 00:12:19.085" level="INFO">Succeeded to get button reference for button three.</msg>
+<msg timestamp="20190517 00:12:19.086" level="DEBUG">Performing the three button press.</msg>
+<msg timestamp="20190517 00:12:19.192" level="INFO">Succeeded to performing the three button press.</msg>
+<msg timestamp="20190517 00:12:19.193" level="DEBUG">Getting button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:19.206" level="INFO">Succeeded to get button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:19.207" level="DEBUG">Performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:19.312" level="INFO">Succeeded to performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:19.314" level="DEBUG">Performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:19.421" level="INFO">Succeeded to performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:19.423" level="DEBUG">Performing the subtract button press.</msg>
+<msg timestamp="20190517 00:12:19.529" level="INFO">Succeeded to performing the subtract button press.</msg>
+<msg timestamp="20190517 00:12:19.529" level="DEBUG">Getting button reference for button two.</msg>
+<msg timestamp="20190517 00:12:19.535" level="INFO">Succeeded to get button reference for button two.</msg>
+<msg timestamp="20190517 00:12:19.536" level="DEBUG">Performing the two button press.</msg>
+<msg timestamp="20190517 00:12:19.645" level="INFO">Succeeded to performing the two button press.</msg>
+<msg timestamp="20190517 00:12:19.653" level="DEBUG">Performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:19.762" level="INFO">Succeeded to performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:19.772" level="DEBUG">Performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:19.885" level="INFO">Succeeded to performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:19.885" level="DEBUG">Checking the result with expected number -28.</msg>
+<msg timestamp="20190517 00:12:19.888" level="INFO">Succeeded to get result: -28.</msg>
+<msg timestamp="20190517 00:12:19.889" level="DEBUG">Succeeded to check the result with expected number -28.</msg>
+<msg timestamp="20190517 00:12:19.889" level="DEBUG">Succeed to check calculation: -30 - -2 = -28.</msg>
+<status status="PASS" starttime="20190517 00:12:19.078" endtime="20190517 00:12:19.889"></status>
+</kw>
+<kw name="Test Teardown" type="teardown">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:19.891" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:19.891" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:19.993" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:19.994" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:19.890" endtime="20190517 00:12:19.994"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:19.890" endtime="20190517 00:12:19.994"></status>
+</kw>
+<tags>
+<tag>function</tag>
+</tags>
+<status status="PASS" starttime="20190517 00:12:17.427" endtime="20190517 00:12:19.994" critical="yes"></status>
+</test>
+<test id="s1-t6" name="Check the multiplication of two integer numbers">
+<kw name="Test Setup" type="setup">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:19.995" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:19.996" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:20.098" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:20.099" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:19.995" endtime="20190517 00:12:20.099"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:19.995" endtime="20190517 00:12:20.099"></status>
+</kw>
+<kw name="Check Binary Calc" library="lib_calc">
+<doc>Checks binary calculation by comparing the expected result with the display result.</doc>
+<arguments>
+<arg>3</arg>
+<arg>*</arg>
+<arg>2</arg>
+<arg>6</arg>
+</arguments>
+<msg timestamp="20190517 00:12:20.100" level="DEBUG">Checking calculation: 3 * 2 = 6.</msg>
+<msg timestamp="20190517 00:12:20.100" level="DEBUG">Getting button reference for button three.</msg>
+<msg timestamp="20190517 00:12:20.107" level="INFO">Succeeded to get button reference for button three.</msg>
+<msg timestamp="20190517 00:12:20.108" level="DEBUG">Performing the three button press.</msg>
+<msg timestamp="20190517 00:12:20.215" level="INFO">Succeeded to performing the three button press.</msg>
+<msg timestamp="20190517 00:12:20.220" level="DEBUG">Performing the multiply button press.</msg>
+<msg timestamp="20190517 00:12:20.334" level="INFO">Succeeded to performing the multiply button press.</msg>
+<msg timestamp="20190517 00:12:20.335" level="DEBUG">Getting button reference for button two.</msg>
+<msg timestamp="20190517 00:12:20.344" level="INFO">Succeeded to get button reference for button two.</msg>
+<msg timestamp="20190517 00:12:20.345" level="DEBUG">Performing the two button press.</msg>
+<msg timestamp="20190517 00:12:20.454" level="INFO">Succeeded to performing the two button press.</msg>
+<msg timestamp="20190517 00:12:20.455" level="DEBUG">Performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:20.560" level="INFO">Succeeded to performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:20.560" level="DEBUG">Checking the result with expected number 6.</msg>
+<msg timestamp="20190517 00:12:20.562" level="INFO">Succeeded to get result: 6.</msg>
+<msg timestamp="20190517 00:12:20.562" level="DEBUG">Succeeded to check the result with expected number 6.</msg>
+<msg timestamp="20190517 00:12:20.562" level="DEBUG">Succeed to check calculation: 3 * 2 = 6.</msg>
+<status status="PASS" starttime="20190517 00:12:20.099" endtime="20190517 00:12:20.562"></status>
+</kw>
+<kw name="Check Binary Calc" library="lib_calc">
+<doc>Checks binary calculation by comparing the expected result with the display result.</doc>
+<arguments>
+<arg>10</arg>
+<arg>*</arg>
+<arg>-2</arg>
+<arg>-20</arg>
+</arguments>
+<msg timestamp="20190517 00:12:20.563" level="DEBUG">Checking calculation: 10 * -2 = -20.</msg>
+<msg timestamp="20190517 00:12:20.563" level="DEBUG">Getting button reference for button one.</msg>
+<msg timestamp="20190517 00:12:20.575" level="INFO">Succeeded to get button reference for button one.</msg>
+<msg timestamp="20190517 00:12:20.576" level="DEBUG">Performing the one button press.</msg>
+<msg timestamp="20190517 00:12:20.681" level="INFO">Succeeded to performing the one button press.</msg>
+<msg timestamp="20190517 00:12:20.682" level="DEBUG">Getting button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:20.697" level="INFO">Succeeded to get button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:20.698" level="DEBUG">Performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:20.806" level="INFO">Succeeded to performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:20.814" level="DEBUG">Performing the multiply button press.</msg>
+<msg timestamp="20190517 00:12:20.930" level="INFO">Succeeded to performing the multiply button press.</msg>
+<msg timestamp="20190517 00:12:20.930" level="DEBUG">Getting button reference for button two.</msg>
+<msg timestamp="20190517 00:12:20.936" level="INFO">Succeeded to get button reference for button two.</msg>
+<msg timestamp="20190517 00:12:20.937" level="DEBUG">Performing the two button press.</msg>
+<msg timestamp="20190517 00:12:21.045" level="INFO">Succeeded to performing the two button press.</msg>
+<msg timestamp="20190517 00:12:21.048" level="DEBUG">Performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:21.156" level="INFO">Succeeded to performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:21.162" level="DEBUG">Performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:21.267" level="INFO">Succeeded to performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:21.268" level="DEBUG">Checking the result with expected number -20.</msg>
+<msg timestamp="20190517 00:12:21.272" level="INFO">Succeeded to get result: -20.</msg>
+<msg timestamp="20190517 00:12:21.272" level="DEBUG">Succeeded to check the result with expected number -20.</msg>
+<msg timestamp="20190517 00:12:21.272" level="DEBUG">Succeed to check calculation: 10 * -2 = -20.</msg>
+<status status="PASS" starttime="20190517 00:12:20.563" endtime="20190517 00:12:21.272"></status>
+</kw>
+<kw name="Check Binary Calc" library="lib_calc">
+<doc>Checks binary calculation by comparing the expected result with the display result.</doc>
+<arguments>
+<arg>-3</arg>
+<arg>*</arg>
+<arg>1</arg>
+<arg>-3</arg>
+</arguments>
+<msg timestamp="20190517 00:12:21.273" level="DEBUG">Checking calculation: -3 * 1 = -3.</msg>
+<msg timestamp="20190517 00:12:21.273" level="DEBUG">Getting button reference for button three.</msg>
+<msg timestamp="20190517 00:12:21.280" level="INFO">Succeeded to get button reference for button three.</msg>
+<msg timestamp="20190517 00:12:21.281" level="DEBUG">Performing the three button press.</msg>
+<msg timestamp="20190517 00:12:21.390" level="INFO">Succeeded to performing the three button press.</msg>
+<msg timestamp="20190517 00:12:21.399" level="DEBUG">Performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:21.513" level="INFO">Succeeded to performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:21.521" level="DEBUG">Performing the multiply button press.</msg>
+<msg timestamp="20190517 00:12:21.632" level="INFO">Succeeded to performing the multiply button press.</msg>
+<msg timestamp="20190517 00:12:21.632" level="DEBUG">Getting button reference for button one.</msg>
+<msg timestamp="20190517 00:12:21.645" level="INFO">Succeeded to get button reference for button one.</msg>
+<msg timestamp="20190517 00:12:21.646" level="DEBUG">Performing the one button press.</msg>
+<msg timestamp="20190517 00:12:21.754" level="INFO">Succeeded to performing the one button press.</msg>
+<msg timestamp="20190517 00:12:21.762" level="DEBUG">Performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:21.874" level="INFO">Succeeded to performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:21.874" level="DEBUG">Checking the result with expected number -3.</msg>
+<msg timestamp="20190517 00:12:21.876" level="INFO">Succeeded to get result: -3.</msg>
+<msg timestamp="20190517 00:12:21.876" level="DEBUG">Succeeded to check the result with expected number -3.</msg>
+<msg timestamp="20190517 00:12:21.876" level="DEBUG">Succeed to check calculation: -3 * 1 = -3.</msg>
+<status status="PASS" starttime="20190517 00:12:21.273" endtime="20190517 00:12:21.876"></status>
+</kw>
+<kw name="Test Teardown" type="teardown">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:21.877" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:21.878" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:21.981" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:21.982" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:21.877" endtime="20190517 00:12:21.982"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:21.876" endtime="20190517 00:12:21.982"></status>
+</kw>
+<tags>
+<tag>function</tag>
+</tags>
+<status status="PASS" starttime="20190517 00:12:19.994" endtime="20190517 00:12:21.982" critical="yes"></status>
+</test>
+<test id="s1-t7" name="Check the division of two integer numbers">
+<kw name="Test Setup" type="setup">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:21.983" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:21.985" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:22.101" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:22.101" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:21.983" endtime="20190517 00:12:22.101"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:21.983" endtime="20190517 00:12:22.101"></status>
+</kw>
+<kw name="Check Binary Calc" library="lib_calc">
+<doc>Checks binary calculation by comparing the expected result with the display result.</doc>
+<arguments>
+<arg>5</arg>
+<arg>/</arg>
+<arg>5</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190517 00:12:22.102" level="DEBUG">Checking calculation: 5 / 5 = 1.</msg>
+<msg timestamp="20190517 00:12:22.102" level="DEBUG">Getting button reference for button five.</msg>
+<msg timestamp="20190517 00:12:22.117" level="INFO">Succeeded to get button reference for button five.</msg>
+<msg timestamp="20190517 00:12:22.118" level="DEBUG">Performing the five button press.</msg>
+<msg timestamp="20190517 00:12:22.227" level="INFO">Succeeded to performing the five button press.</msg>
+<msg timestamp="20190517 00:12:22.230" level="DEBUG">Performing the divide button press.</msg>
+<msg timestamp="20190517 00:12:22.336" level="INFO">Succeeded to performing the divide button press.</msg>
+<msg timestamp="20190517 00:12:22.336" level="DEBUG">Getting button reference for button five.</msg>
+<msg timestamp="20190517 00:12:22.354" level="INFO">Succeeded to get button reference for button five.</msg>
+<msg timestamp="20190517 00:12:22.355" level="DEBUG">Performing the five button press.</msg>
+<msg timestamp="20190517 00:12:22.460" level="INFO">Succeeded to performing the five button press.</msg>
+<msg timestamp="20190517 00:12:22.462" level="DEBUG">Performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:22.568" level="INFO">Succeeded to performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:22.571" level="DEBUG">Checking the result with expected number 1.</msg>
+<msg timestamp="20190517 00:12:22.573" level="INFO">Succeeded to get result: 1.</msg>
+<msg timestamp="20190517 00:12:22.573" level="DEBUG">Succeeded to check the result with expected number 1.</msg>
+<msg timestamp="20190517 00:12:22.573" level="DEBUG">Succeed to check calculation: 5 / 5 = 1.</msg>
+<status status="PASS" starttime="20190517 00:12:22.101" endtime="20190517 00:12:22.573"></status>
+</kw>
+<kw name="Check Binary Calc" library="lib_calc">
+<doc>Checks binary calculation by comparing the expected result with the display result.</doc>
+<arguments>
+<arg>40</arg>
+<arg>/</arg>
+<arg>-2</arg>
+<arg>-20</arg>
+</arguments>
+<msg timestamp="20190517 00:12:22.574" level="DEBUG">Checking calculation: 40 / -2 = -20.</msg>
+<msg timestamp="20190517 00:12:22.574" level="DEBUG">Getting button reference for button four.</msg>
+<msg timestamp="20190517 00:12:22.598" level="INFO">Succeeded to get button reference for button four.</msg>
+<msg timestamp="20190517 00:12:22.599" level="DEBUG">Performing the four button press.</msg>
+<msg timestamp="20190517 00:12:22.707" level="INFO">Succeeded to performing the four button press.</msg>
+<msg timestamp="20190517 00:12:22.707" level="DEBUG">Getting button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:22.750" level="INFO">Succeeded to get button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:22.751" level="DEBUG">Performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:22.859" level="INFO">Succeeded to performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:22.862" level="DEBUG">Performing the divide button press.</msg>
+<msg timestamp="20190517 00:12:22.968" level="INFO">Succeeded to performing the divide button press.</msg>
+<msg timestamp="20190517 00:12:22.968" level="DEBUG">Getting button reference for button two.</msg>
+<msg timestamp="20190517 00:12:22.974" level="INFO">Succeeded to get button reference for button two.</msg>
+<msg timestamp="20190517 00:12:22.975" level="DEBUG">Performing the two button press.</msg>
+<msg timestamp="20190517 00:12:23.085" level="INFO">Succeeded to performing the two button press.</msg>
+<msg timestamp="20190517 00:12:23.092" level="DEBUG">Performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:23.204" level="INFO">Succeeded to performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:23.208" level="DEBUG">Performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:23.313" level="INFO">Succeeded to performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:23.314" level="DEBUG">Checking the result with expected number -20.</msg>
+<msg timestamp="20190517 00:12:23.316" level="INFO">Succeeded to get result: -20.</msg>
+<msg timestamp="20190517 00:12:23.316" level="DEBUG">Succeeded to check the result with expected number -20.</msg>
+<msg timestamp="20190517 00:12:23.316" level="DEBUG">Succeed to check calculation: 40 / -2 = -20.</msg>
+<status status="PASS" starttime="20190517 00:12:22.573" endtime="20190517 00:12:23.317"></status>
+</kw>
+<kw name="Check Binary Calc" library="lib_calc">
+<doc>Checks binary calculation by comparing the expected result with the display result.</doc>
+<arguments>
+<arg>5</arg>
+<arg>/</arg>
+<arg>2</arg>
+<arg>2,5</arg>
+</arguments>
+<msg timestamp="20190517 00:12:23.317" level="DEBUG">Checking calculation: 5 / 2 = 2,5.</msg>
+<msg timestamp="20190517 00:12:23.317" level="DEBUG">Getting button reference for button five.</msg>
+<msg timestamp="20190517 00:12:23.332" level="INFO">Succeeded to get button reference for button five.</msg>
+<msg timestamp="20190517 00:12:23.334" level="DEBUG">Performing the five button press.</msg>
+<msg timestamp="20190517 00:12:23.442" level="INFO">Succeeded to performing the five button press.</msg>
+<msg timestamp="20190517 00:12:23.450" level="DEBUG">Performing the divide button press.</msg>
+<msg timestamp="20190517 00:12:23.560" level="INFO">Succeeded to performing the divide button press.</msg>
+<msg timestamp="20190517 00:12:23.561" level="DEBUG">Getting button reference for button two.</msg>
+<msg timestamp="20190517 00:12:23.572" level="INFO">Succeeded to get button reference for button two.</msg>
+<msg timestamp="20190517 00:12:23.573" level="DEBUG">Performing the two button press.</msg>
+<msg timestamp="20190517 00:12:23.681" level="INFO">Succeeded to performing the two button press.</msg>
+<msg timestamp="20190517 00:12:23.685" level="DEBUG">Performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:23.793" level="INFO">Succeeded to performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:23.793" level="DEBUG">Checking the result with expected number 2,5.</msg>
+<msg timestamp="20190517 00:12:23.802" level="INFO">Succeeded to get result: 2,5.</msg>
+<msg timestamp="20190517 00:12:23.802" level="DEBUG">Succeeded to check the result with expected number 2,5.</msg>
+<msg timestamp="20190517 00:12:23.803" level="DEBUG">Succeed to check calculation: 5 / 2 = 2,5.</msg>
+<status status="PASS" starttime="20190517 00:12:23.317" endtime="20190517 00:12:23.803"></status>
+</kw>
+<kw name="Test Teardown" type="teardown">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:23.806" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:23.807" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:23.917" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:23.917" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:23.805" endtime="20190517 00:12:23.917"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:23.804" endtime="20190517 00:12:23.919"></status>
+</kw>
+<tags>
+<tag>function</tag>
+</tags>
+<status status="PASS" starttime="20190517 00:12:21.982" endtime="20190517 00:12:23.919" critical="yes"></status>
+</test>
+<test id="s1-t8" name="Check the division of a number by zero">
+<kw name="Test Setup" type="setup">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:23.921" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:23.922" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:24.032" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:24.032" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:23.921" endtime="20190517 00:12:24.033"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:23.920" endtime="20190517 00:12:24.033"></status>
+</kw>
+<kw name="Check Binary Calc" library="lib_calc">
+<doc>Checks binary calculation by comparing the expected result with the display result.</doc>
+<arguments>
+<arg>4</arg>
+<arg>/</arg>
+<arg>0</arg>
+<arg>${ERROR_DIV_ZERO}</arg>
+</arguments>
+<msg timestamp="20190517 00:12:24.034" level="DEBUG">Checking calculation: 4 / 0 = Not a number.</msg>
+<msg timestamp="20190517 00:12:24.034" level="DEBUG">Getting button reference for button four.</msg>
+<msg timestamp="20190517 00:12:24.055" level="INFO">Succeeded to get button reference for button four.</msg>
+<msg timestamp="20190517 00:12:24.056" level="DEBUG">Performing the four button press.</msg>
+<msg timestamp="20190517 00:12:24.161" level="INFO">Succeeded to performing the four button press.</msg>
+<msg timestamp="20190517 00:12:24.163" level="DEBUG">Performing the divide button press.</msg>
+<msg timestamp="20190517 00:12:24.271" level="INFO">Succeeded to performing the divide button press.</msg>
+<msg timestamp="20190517 00:12:24.272" level="DEBUG">Getting button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:24.304" level="INFO">Succeeded to get button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:24.305" level="DEBUG">Performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:24.413" level="INFO">Succeeded to performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:24.417" level="DEBUG">Performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:24.525" level="INFO">Succeeded to performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:24.525" level="DEBUG">Checking the result with expected number Not a number.</msg>
+<msg timestamp="20190517 00:12:24.535" level="INFO">Succeeded to get result: Not a number.</msg>
+<msg timestamp="20190517 00:12:24.536" level="DEBUG">Succeeded to check the result with expected number Not a number.</msg>
+<msg timestamp="20190517 00:12:24.536" level="DEBUG">Succeed to check calculation: 4 / 0 = Not a number.</msg>
+<status status="PASS" starttime="20190517 00:12:24.034" endtime="20190517 00:12:24.537"></status>
+</kw>
+<kw name="Check Binary Calc" library="lib_calc">
+<doc>Checks binary calculation by comparing the expected result with the display result.</doc>
+<arguments>
+<arg>10</arg>
+<arg>/</arg>
+<arg>0</arg>
+<arg>${ERROR_DIV_ZERO}</arg>
+</arguments>
+<msg timestamp="20190517 00:12:24.539" level="DEBUG">Checking calculation: 10 / 0 = Not a number.</msg>
+<msg timestamp="20190517 00:12:24.540" level="DEBUG">Getting button reference for button one.</msg>
+<msg timestamp="20190517 00:12:24.554" level="INFO">Succeeded to get button reference for button one.</msg>
+<msg timestamp="20190517 00:12:24.555" level="DEBUG">Performing the one button press.</msg>
+<msg timestamp="20190517 00:12:24.663" level="INFO">Succeeded to performing the one button press.</msg>
+<msg timestamp="20190517 00:12:24.664" level="DEBUG">Getting button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:24.676" level="INFO">Succeeded to get button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:24.677" level="DEBUG">Performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:24.785" level="INFO">Succeeded to performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:24.792" level="DEBUG">Performing the divide button press.</msg>
+<msg timestamp="20190517 00:12:24.907" level="INFO">Succeeded to performing the divide button press.</msg>
+<msg timestamp="20190517 00:12:24.908" level="DEBUG">Getting button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:24.924" level="INFO">Succeeded to get button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:24.925" level="DEBUG">Performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:25.032" level="INFO">Succeeded to performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:25.036" level="DEBUG">Performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:25.143" level="INFO">Succeeded to performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:25.144" level="DEBUG">Checking the result with expected number Not a number.</msg>
+<msg timestamp="20190517 00:12:25.149" level="INFO">Succeeded to get result: Not a number.</msg>
+<msg timestamp="20190517 00:12:25.149" level="DEBUG">Succeeded to check the result with expected number Not a number.</msg>
+<msg timestamp="20190517 00:12:25.149" level="DEBUG">Succeed to check calculation: 10 / 0 = Not a number.</msg>
+<status status="PASS" starttime="20190517 00:12:24.538" endtime="20190517 00:12:25.149"></status>
+</kw>
+<kw name="Check Binary Calc" library="lib_calc">
+<doc>Checks binary calculation by comparing the expected result with the display result.</doc>
+<arguments>
+<arg>-3</arg>
+<arg>/</arg>
+<arg>0</arg>
+<arg>${ERROR_DIV_ZERO}</arg>
+</arguments>
+<msg timestamp="20190517 00:12:25.149" level="DEBUG">Checking calculation: -3 / 0 = Not a number.</msg>
+<msg timestamp="20190517 00:12:25.149" level="DEBUG">Getting button reference for button three.</msg>
+<msg timestamp="20190517 00:12:25.156" level="INFO">Succeeded to get button reference for button three.</msg>
+<msg timestamp="20190517 00:12:25.157" level="DEBUG">Performing the three button press.</msg>
+<msg timestamp="20190517 00:12:25.264" level="INFO">Succeeded to performing the three button press.</msg>
+<msg timestamp="20190517 00:12:25.269" level="DEBUG">Performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:25.381" level="INFO">Succeeded to performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:25.390" level="DEBUG">Performing the divide button press.</msg>
+<msg timestamp="20190517 00:12:25.498" level="INFO">Succeeded to performing the divide button press.</msg>
+<msg timestamp="20190517 00:12:25.498" level="DEBUG">Getting button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:25.533" level="INFO">Succeeded to get button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:25.534" level="DEBUG">Performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:25.643" level="INFO">Succeeded to performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:25.647" level="DEBUG">Performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:25.754" level="INFO">Succeeded to performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:25.755" level="DEBUG">Checking the result with expected number Not a number.</msg>
+<msg timestamp="20190517 00:12:25.762" level="INFO">Succeeded to get result: Not a number.</msg>
+<msg timestamp="20190517 00:12:25.763" level="DEBUG">Succeeded to check the result with expected number Not a number.</msg>
+<msg timestamp="20190517 00:12:25.763" level="DEBUG">Succeed to check calculation: -3 / 0 = Not a number.</msg>
+<status status="PASS" starttime="20190517 00:12:25.149" endtime="20190517 00:12:25.764"></status>
+</kw>
+<kw name="Test Teardown" type="teardown">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:25.767" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:25.772" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:25.886" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:25.887" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:25.767" endtime="20190517 00:12:25.887"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:25.765" endtime="20190517 00:12:25.888"></status>
+</kw>
+<tags>
+<tag>function</tag>
+</tags>
+<status status="PASS" starttime="20190517 00:12:23.920" endtime="20190517 00:12:25.888" critical="yes"></status>
+</test>
+<test id="s1-t9" name="Check the division of zero by any number">
+<kw name="Test Setup" type="setup">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:25.892" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:25.893" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:26.012" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:26.012" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:25.892" endtime="20190517 00:12:26.013"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:25.891" endtime="20190517 00:12:26.013"></status>
+</kw>
+<kw name="Check Binary Calc" library="lib_calc">
+<doc>Checks binary calculation by comparing the expected result with the display result.</doc>
+<arguments>
+<arg>0</arg>
+<arg>/</arg>
+<arg>1</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20190517 00:12:26.013" level="DEBUG">Checking calculation: 0 / 1 = 0.</msg>
+<msg timestamp="20190517 00:12:26.014" level="DEBUG">Getting button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:26.024" level="INFO">Succeeded to get button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:26.025" level="DEBUG">Performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:26.134" level="INFO">Succeeded to performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:26.139" level="DEBUG">Performing the divide button press.</msg>
+<msg timestamp="20190517 00:12:26.260" level="INFO">Succeeded to performing the divide button press.</msg>
+<msg timestamp="20190517 00:12:26.260" level="DEBUG">Getting button reference for button one.</msg>
+<msg timestamp="20190517 00:12:26.299" level="INFO">Succeeded to get button reference for button one.</msg>
+<msg timestamp="20190517 00:12:26.300" level="DEBUG">Performing the one button press.</msg>
+<msg timestamp="20190517 00:12:26.418" level="INFO">Succeeded to performing the one button press.</msg>
+<msg timestamp="20190517 00:12:26.425" level="DEBUG">Performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:26.537" level="INFO">Succeeded to performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:26.538" level="DEBUG">Checking the result with expected number 0.</msg>
+<msg timestamp="20190517 00:12:26.545" level="INFO">Succeeded to get result: 0.</msg>
+<msg timestamp="20190517 00:12:26.545" level="DEBUG">Succeeded to check the result with expected number 0.</msg>
+<msg timestamp="20190517 00:12:26.546" level="DEBUG">Succeed to check calculation: 0 / 1 = 0.</msg>
+<status status="PASS" starttime="20190517 00:12:26.013" endtime="20190517 00:12:26.546"></status>
+</kw>
+<kw name="Check Binary Calc" library="lib_calc">
+<doc>Checks binary calculation by comparing the expected result with the display result.</doc>
+<arguments>
+<arg>0</arg>
+<arg>/</arg>
+<arg>-2</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20190517 00:12:26.547" level="DEBUG">Checking calculation: 0 / -2 = 0.</msg>
+<msg timestamp="20190517 00:12:26.547" level="DEBUG">Getting button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:26.558" level="INFO">Succeeded to get button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:26.559" level="DEBUG">Performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:26.667" level="INFO">Succeeded to performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:26.675" level="DEBUG">Performing the divide button press.</msg>
+<msg timestamp="20190517 00:12:26.782" level="INFO">Succeeded to performing the divide button press.</msg>
+<msg timestamp="20190517 00:12:26.783" level="DEBUG">Getting button reference for button two.</msg>
+<msg timestamp="20190517 00:12:26.795" level="INFO">Succeeded to get button reference for button two.</msg>
+<msg timestamp="20190517 00:12:26.796" level="DEBUG">Performing the two button press.</msg>
+<msg timestamp="20190517 00:12:26.903" level="INFO">Succeeded to performing the two button press.</msg>
+<msg timestamp="20190517 00:12:26.911" level="DEBUG">Performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:27.029" level="INFO">Succeeded to performing the negate button press.</msg>
+<msg timestamp="20190517 00:12:27.038" level="DEBUG">Performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:27.149" level="INFO">Succeeded to performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:27.149" level="DEBUG">Checking the result with expected number 0.</msg>
+<msg timestamp="20190517 00:12:27.154" level="INFO">Succeeded to get result: 0.</msg>
+<msg timestamp="20190517 00:12:27.154" level="DEBUG">Succeeded to check the result with expected number 0.</msg>
+<msg timestamp="20190517 00:12:27.155" level="DEBUG">Succeed to check calculation: 0 / -2 = 0.</msg>
+<status status="PASS" starttime="20190517 00:12:26.546" endtime="20190517 00:12:27.155"></status>
+</kw>
+<kw name="Check Binary Calc" library="lib_calc">
+<doc>Checks binary calculation by comparing the expected result with the display result.</doc>
+<arguments>
+<arg>0</arg>
+<arg>/</arg>
+<arg>30</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20190517 00:12:27.157" level="DEBUG">Checking calculation: 0 / 30 = 0.</msg>
+<msg timestamp="20190517 00:12:27.157" level="DEBUG">Getting button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:27.193" level="INFO">Succeeded to get button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:27.195" level="DEBUG">Performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:27.302" level="INFO">Succeeded to performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:27.305" level="DEBUG">Performing the divide button press.</msg>
+<msg timestamp="20190517 00:12:27.415" level="INFO">Succeeded to performing the divide button press.</msg>
+<msg timestamp="20190517 00:12:27.415" level="DEBUG">Getting button reference for button three.</msg>
+<msg timestamp="20190517 00:12:27.425" level="INFO">Succeeded to get button reference for button three.</msg>
+<msg timestamp="20190517 00:12:27.426" level="DEBUG">Performing the three button press.</msg>
+<msg timestamp="20190517 00:12:27.534" level="INFO">Succeeded to performing the three button press.</msg>
+<msg timestamp="20190517 00:12:27.534" level="DEBUG">Getting button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:27.548" level="INFO">Succeeded to get button reference for button zero.</msg>
+<msg timestamp="20190517 00:12:27.549" level="DEBUG">Performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:27.657" level="INFO">Succeeded to performing the zero button press.</msg>
+<msg timestamp="20190517 00:12:27.666" level="DEBUG">Performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:27.774" level="INFO">Succeeded to performing the equals button press.</msg>
+<msg timestamp="20190517 00:12:27.774" level="DEBUG">Checking the result with expected number 0.</msg>
+<msg timestamp="20190517 00:12:27.780" level="INFO">Succeeded to get result: 0.</msg>
+<msg timestamp="20190517 00:12:27.780" level="DEBUG">Succeeded to check the result with expected number 0.</msg>
+<msg timestamp="20190517 00:12:27.780" level="DEBUG">Succeed to check calculation: 0 / 30 = 0.</msg>
+<status status="PASS" starttime="20190517 00:12:27.156" endtime="20190517 00:12:27.781"></status>
+</kw>
+<kw name="Test Teardown" type="teardown">
+<kw name="Clear All" library="lib_calc">
+<doc>Perform clear button press to clear the result.</doc>
+<msg timestamp="20190517 00:12:27.784" level="DEBUG">Clear all.</msg>
+<msg timestamp="20190517 00:12:27.792" level="DEBUG">Performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:27.902" level="INFO">Succeeded to performing the clear button press.</msg>
+<msg timestamp="20190517 00:12:27.902" level="DEBUG">Succeeded to clear all.</msg>
+<status status="PASS" starttime="20190517 00:12:27.783" endtime="20190517 00:12:27.903"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:27.782" endtime="20190517 00:12:27.903"></status>
+</kw>
+<tags>
+<tag>function</tag>
+</tags>
+<status status="PASS" starttime="20190517 00:12:25.889" endtime="20190517 00:12:27.904" critical="yes"></status>
+</test>
+<kw name="Suite Teardown" type="teardown">
+<kw name="Stop Calc" library="lib_calc">
+<doc>Stop the calculator app by bundle id.</doc>
+<msg timestamp="20190517 00:12:27.906" level="DEBUG">Stopping calculator.app.</msg>
+<msg timestamp="20190517 00:12:27.908" level="INFO">Succeeded to stop calculator.app.</msg>
+<status status="PASS" starttime="20190517 00:12:27.906" endtime="20190517 00:12:27.908"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:27.906" endtime="20190517 00:12:27.908"></status>
+</kw>
+<status status="PASS" starttime="20190517 00:12:09.883" endtime="20190517 00:12:27.908"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0">Critical Tests</stat>
+<stat pass="9" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0">basic</stat>
+<stat pass="1" fail="0">clear</stat>
+<stat pass="1" fail="0">equal</stat>
+<stat pass="6" fail="0">function</stat>
+<stat pass="1" fail="0">number</stat>
+</tag>
+<suite>
+<stat pass="9" fail="0" id="s1" name="Calc">Calc</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

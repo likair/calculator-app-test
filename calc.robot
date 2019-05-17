@@ -73,7 +73,7 @@ Check the division of zero by any number
     [Tags]    function
     [Template]    Check Binary Calc
     0      /      1      0
-    0      /      -2      0
+    0      /      -2     0
     0      /      30     0
 
 
